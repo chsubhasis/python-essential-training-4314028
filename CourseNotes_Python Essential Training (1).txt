@@ -1,0 +1,281 @@
+Course Title: Python Essential Training
+
+Description: Python is one of the most commonly used dynamic languages for many large organizations, including Google, Yahoo and IBM. Supported on all major operating systems, it comes pre-installed on Macs, as well as most Linux and Unix-based systems. In this course, senior software engineer Ryan Mitchell guides you through all the essentials of learning and using Python. Learn how computers think, as well as how to install Python, pip, and Jupyter Notebook and the basics of writing a program. Explore variables and types, operators, functions, classes, objects, and more. Go over basic data types like ints and floats, Booleans, and strings. Deep dive into basic data structures, control flow, functions, classes, and objects. Find out how to handle errors and exceptions, as well as threads and processes. Plus, discover how to work with different types of files in Python, pass command-line arguments to your Python script, and create modules and packages.
+
+
+***********************************************
+Chapter: 2. Quickstart
+***********************************************
+
+
+-----------------------------------------------
+Video: Variables and types
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:01:27            variable name can have special char except underscore 
+
+0:01:39            variable names starts with lower case letter 
+
+0:03:49            type(2j) is complex            
+
+0:05:46            can only concatenate str (not "int") to str 
+
+
+-----------------------------------------------
+Video: Data structures
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:53            List with third brackets, Sets with curly brackets. Every element in set is unique. So len() only counts unique values. Order of element doesn't matter in set. 
+
+0:05:34            Tuples - similar to list.. order matters. Diff with list is, Tuple doesn't have attribute append. You can not modify Tuples. They are memory efficient. var = (1,2,3) and then var.append(4) will give an error since append doesnt exits for Tuples. 
+
+0:07:17            Dictionary - kind of map... key val pair.. key has to be unique. Like sets, Dictionary also use curly braces. 
+
+
+-----------------------------------------------
+Video: Operators
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:58            division results a float value back always 
+
+0:02:47            string multiply with integrate repeat the strings (concatanated) 
+
+0:05:24            membership operator --> in     
+
+
+-----------------------------------------------
+Video: Control flow
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:16            if or else statement --> colon (:) followed by indented code 
+
+0:03:40            for loop over iterable (like list).. for item in myList : intended code 
+
+0:04:11            while condition : intended code 
+
+
+-----------------------------------------------
+Video: Functions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:06            def funcName(val) : intended code 
+
+
+-----------------------------------------------
+Video: Classes and objects
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:05            None is somehow equivalent of void 
+
+0:02:35            class ClassName : intended code.. special function is def __init__(self) : intended code.. Dog() will invoke __init__ function of Dog class. 
+
+0:05:45            if you have class instances, this is passed as first variable of func.. 
+
+
+***********************************************
+Chapter: 3. Basic Data Types
+***********************************************
+
+
+-----------------------------------------------
+Video: Other types of numbers
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:04            int plus float (or multiple float) results float.. if you cast int() then int is returned.. but doesnt round.. int(8.999) is 8... you can use round function for the same. Float uses proximation and hence 1.2 - 1.0 is 0.19999999.. you can use Decimal().. int('123', 5) # one time 5**2 (25), 2 times 5, 3 times 1 == 38
+int(8.9) is 8 
+
+
+-----------------------------------------------
+Video: Booleans
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:06:34            bool(no_zero) is always true.. bool(1) T, bool(-1) T, bool(0) F
+bool(non_emply_string/list/dict) is always true
+boolean logics executes left to right 
+
+
+-----------------------------------------------
+Video: Strings
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:06:09            name[0:7] from 0 to 6 char.
+name[:7] // name[7:]
+Same format while slicing lists also
+for string format f'my age {2*5}'
+multi-line string - use ''' 
+
+
+***********************************************
+Chapter: 4. Basic Data Structures
+***********************************************
+
+
+-----------------------------------------------
+Video: Lists
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:13            myList[::2] -- every 2nd object
+-ve step is backwards
+insert/remove/pop
+copy() create a copy of list (and not the same list) .. print reversely - list(range(101))[::-5] 
+
+
+-----------------------------------------------
+Video: Tuples and sets
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:06:49            tuple - () - can not be modified
+set - unique - {} and and Dictionary - {'key':'val'}
+list - []  
+
+
+-----------------------------------------------
+Video: Dictionaries
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:02            DefaultDicts will automatically populate a missing key when it is accessed. 
+
+
+-----------------------------------------------
+Video: List comprehensions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:03            [[someFunc(comment) for comment in blog.comments] for blog in blogs] 
+
+
+***********************************************
+Chapter: 5. Control Flow
+***********************************************
+
+
+-----------------------------------------------
+Video: While
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:06            print(f'We are at {wait_var} seconds')
+The pass statement is used as a placeholder for future code.
+break exits from the first loop it is nested with.. similar;y continue 
+
+
+***********************************************
+Chapter: 6. Functions
+***********************************************
+
+
+-----------------------------------------------
+Video: The anatomy of a function
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:02:59            if a function has many parameters, you dont need to bother about the order of the param. Use named parameters in those cases. Variable number of arguments - *args
+Handling keyword arguments - *kwargs
+Keyword arguments are dictionary whereas arguments are tuples 
+
+
+-----------------------------------------------
+Video: Variables and scope
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:04            Check local scope first, and if thats n ot defined then global scope. 
+
+
+-----------------------------------------------
+Video: Functions as variables
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:02            The Python "SyntaxError: positional argument follows keyword argument" occurs when we pass keyword arguments before positional ones in a call to a function.
+
+To solve the error, pass positional arguments in the right order and pass any keyword arguments after the positional ones. 
+
+0:05:01            Example of lambda -
+def someFunc(func):
+    print(func(5) + 2)
+
+someFunc(lambda x: x * 3)
+
+Note: No multiline allowed in lambda. 
+
+
+-----------------------------------------------
+Video: Solution: Can you hear me now?
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:41            Calling a function as variable : def getWithRetry(dataFunc):
+    print(dataFunc())
+
+getWithRetry(getData50) 
+
+
+***********************************************
+Chapter: 7. Classes and Objects
+***********************************************
+
+
+-----------------------------------------------
+Video: Static and instance methods
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:00:01            static method (call with class name and doesnt have self param) and instance method that belings to a particular instance of a class.
+
+decorator is annotation on function defn. Like @staticmethod. Not needed much. 
+
+
+***********************************************
+Chapter: 8. Errors
+***********************************************
+
+
+-----------------------------------------------
+Video: Errors and exceptions
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:03:16            The catch statement in Java and the except statement in Python are similar in that they are both used to handle exceptions that occur during program execution 12. However, there are some differences between the two:
+
+In Java, exceptions can be either checked or unchecked. Checked exceptions must be caught or declared in the method signature, while unchecked exceptions do not have this requirement 1. In Python, there are no checked exceptions, so there is no requirement to catch or declare them 2.
+Python has a multi-exception catch, which allows you to catch multiple exceptions in a single except block. Java only allows you to catch one exception per catch block 12. 
+
+
+***********************************************
+Chapter: 10. Working with Files
+***********************************************
+
+
+-----------------------------------------------
+Video: Opening, reading, and writing
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:06:07            write will be persisted in the file only when you close that using f.close().. however, if you use 'with open..' clause, you don't need to explicitly close the file 
+
+
+***********************************************
+Chapter: 11. Packaging Python
+***********************************************
+
+
+-----------------------------------------------
+Video: Creating modules and packages
+-----------------------------------------------
+Note Time:         Note Text:                     
+
+0:04:15            The __init__.py file is a special file in Python packages that serves as an indicator to the Python interpreter that the containing directory is, in fact, a package. 
+
